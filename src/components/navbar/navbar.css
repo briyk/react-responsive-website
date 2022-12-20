@@ -1,0 +1,118 @@
+
+.navbar{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 2rem 4rem;
+}
+
+.navbar__links{
+     flex: 1;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+}
+.navbar__links__logo{
+     margin-right: 3rem;
+}
+.navbar__links__logo img{
+     width: 62px;
+     height: 16px;
+}
+
+.navbar__links__container{
+     display: flex;
+}
+.navbar__sign{
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+}
+.navbar__links__container p,
+.navbar__sign p{
+     color: var(--color-white);
+     font-size: 18px;
+     margin: 0 1rem;
+     line-height: 25px;
+     font-weight: 500;
+     text-transform: capitalize;
+     cursor: pointer;
+}
+.navbar__sign button,
+.navbar__menu__container button{
+     padding: 0.5rem 1rem;
+     background: #FF4820;
+     border-radius: 5px;
+     font-weight: 500;
+     font-size: 18px;
+     line-height: 25px;
+     color: var(--color-white);
+     cursor: pointer;
+     border: 0;
+     outline: 0;
+}
+
+
+/*==================== Toggle menu*/
+
+.navbar__menu{
+     display: none;
+     position: relative;
+     margin-left: 1rem;
+}
+.navbar__menu svg{
+     cursor: pointer;
+}
+.navbar__menu__container{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     align-items: flex-end;
+     text-align: end;
+     background: var(--color-footer);
+     padding: 2rem;
+     margin-top: 1rem;
+     position: absolute;
+     top: 40px;
+     right: 0 ;
+     min-width: 240px;
+     border-radius: 5px;
+     box-shadow: 0 0 5 rgba(0, 0, 0, 0.1);
+     color: var(--color-white);
+}
+.navbar__menu__container p{
+     margin: 1rem 0;
+}
+.navbar__menu__container__links-sign{
+     display: none;
+}
+
+
+/*========================== Media Queries*/
+@media screen and (max-width: 1050px) {
+     .navbar__links__container{
+          display: none;
+     }
+     .navbar__menu{
+          display: flex;
+     }
+}
+@media screen and (max-width: 700px) {
+     .navbar{
+          padding: 2rem 4rem;
+     }
+}
+@media screen and (max-width: 550px) {
+     .navbar{
+          padding: 2rem;
+     }
+     .navbar__sign{
+          display: none;
+     }
+     .navbar__menu__container{
+          top: 20px ;
+     }
+     .navbar__menu__container__links-sign{
+          display: block;
+     }
+}
